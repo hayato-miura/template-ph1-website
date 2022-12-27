@@ -616,6 +616,7 @@ body {
   position: relative;
   white-space: nowrap;
 }
+/* 12/25/18:36 */
 .p-top-hero__body__title {
   color: #0071bc;
   font-size: 12px;
@@ -684,6 +685,7 @@ body {
 .p-quiz-container {
   margin-top: 48px;
 }
+
 
 .p-quiz-box:not(:first-of-type) {
   margin-top: 80px;
@@ -762,6 +764,7 @@ body {
   margin-top: 16px;
   padding: 24px;
 }
+/* ここから後から */
 .p-quiz-box__answer__correct {
   background-color: #fff2f5;
   border-radius: 8px;
@@ -801,7 +804,7 @@ body {
   font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   font-size: 24px;
 }
-
+/* ここまで後から */
 .u-icon__link:before {
   content: "\e901";
 }

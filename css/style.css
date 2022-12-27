@@ -27,6 +27,7 @@ body {
     max-width: 1032px;
     padding: 0 16px;
     width: 100%;
+    position: relative;
 }
 
 
@@ -71,6 +72,78 @@ h6 {
     border-radius: 50%;
     padding: 5px;
 }
+.p-heading{
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.8;
+    font-size: 24px;
+}
+.p-heading__caption{
+    color: #0071bc;
+    display: block;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.p-top-container{
+    margin-top: 64px;
+}
+.p-top-hero__inner{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1280px;
+    position: relative;
+}
+.p-top-hero__body{
+    align-self: center;
+    background-color: #eff2f5;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 20px 11px 20px 24px;
+    position: relative;
+    white-space: nowrap;
+    transform: translate(116px,0);
+}
+.p-top-hero__image img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 80px 0px 0px 80px;
+}
+
+.p-top-hero__body__title{
+    color: #0071bc;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.8;
+    text-align: center;
+}
+.p-top-hero__body__catchcopy{
+    display: inline-block;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 6px;
+    margin-right: 62px;
+    margin-left: 62px;
+}
+.p-top-about__body{
+    display: flex;
+    margin-top: 22px;
+}
+.p-top-about__image img{
+    border-radius: 16px;
+    width: 472px;
+    height: 312px;
+    margin: 0px 40px 0px 0px;
+
+}
+.p-top-about__content{
+    margin-top: 60px;
+    line-height: 1.8;
+}
+/* 12/25 */
 .p-line{
     margin-top: 64px;
 }
@@ -111,15 +184,16 @@ h6 {
     font-size: 40px;
 
 }
-h2::before{
-    content:"";
+
+.p-line__title__img{
     vertical-align: middle;
-    padding-right: 8px;
-    background-image: url(../assets/img/icon/icon-line.svg);
     display: inline-block;
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
+    color: #00c300;
+    border-radius: 9px;
+
 }
 .p-line__content{
     color: #eee;
@@ -144,17 +218,7 @@ h2::before{
     position: relative;
     justify-content: center;
 }
-/* .p-line__button::after{
-    content:"";
-    vertical-align: middle;
-    padding-left: 89px;
-    background-image: url(../assets/img/icon/icon-link-dark.svg);
-    display: inline-block;
-    width: 12.25px;
-    height: 12.25px;
-    background-repeat: no-repeat;
- 
-} */
+
 .p-line__button__box{
     background-color: #fff;
     border-radius: 50px;
@@ -167,11 +231,13 @@ h2::before{
     margin-right: auto;
 }
 
-
-/* .arrow__box{
+.arrow{
     position: absolute;
-    /* margin: -35px 20.46px 18.29px 287.29px; */
-    /* float: right; */
+    top: 15px;
+    right: 20px;
+
+}
+
 .p-line__button .u-icon__link{
     position: absolute;
     top: 50%;
@@ -213,6 +279,8 @@ h2::before{
     display: flex;
     padding: 10px;
     border-radius: 16px;
+    width: 288px;
+    height: 80px;
 }
 .p-fixedLine__link .u-icon__line{
     font-size: 28px;
@@ -224,6 +292,8 @@ h2::before{
     color: #fff;
     letter-spacing: 0.14em;
     text-align: left;
+    margin-left: 13px;
+    margin-right: 35px;
 }
 .p-fixedLine__link.u-icon__link{
     color: #fff;
@@ -234,13 +304,133 @@ h2::before{
     padding: 38px 24px 33px;
     border: solid 1px #eee; 
 }
+
+.p-quiz-hero{
+    background: url(../assets/img/quiz/bg-hero.jpg) center center/cover;
+    width: auto;
+    height: 320px;
+    left: 0px;
+    top: 0px;
+    margin-top: 16px;
+}
+.p-quiz-container{
+    margin-top: 48px;
+}
+.p-quiz-box:not(:first-of-type){
+    margin-top: 80px;
+    /* 最初以外はマージンを80pxにする */
+}
+
+.p-quiz-box__label{
+    background-color: #0071bc;
+    border-radius: 8px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 24px;font-weight: bold;
+    line-height: 1.5;
+    padding: 8px 16px;
+}
+.p-quiz-box__label--accent{
+    background-color: #e34e70;
+}
+.p-quiz-box__question__title__text{
+    display: block;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 16px;
+    font-weight: 700;
+font-size: 36px;
+line-height: 54px;
+/* または54px */
+
+text-align: justify;
+}
+.p-quiz-box__question__image{
+    margin: 24px auto 0;
+    max-width: 718px;
+}
+.quiz-image{
+    width: 718px;
+    height: 357px;
+    margin: 70px;
+}
+.p-quiz-box__answer{
+    margin-top: 32px;
+}
+.p-quiz-box__answer__list{
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+}
+.p-quiz-box__answer__button{
+    align-items: center;
+    border: solid 4px #eee;
+    border-radius: 8px;
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.8;
+    padding: 16px;
+    text-align: left;
+    width: 312px;
+}
+.p-quiz-box__answer__button .u-icon__arrow{
+    font-size: 16px;
+    margin-left: auto;
+}
+.p-quiz-box__answer__button:disabled .u-icon__arrow {
+    display: none;
+}
+/* これが何を表しているのかがわからない
+.p-quiz-box__answer__button.is-selected{
+    background-color: #eff2f5;
+    border-color: #0071bc;
+} 
+.p-quiz-box__answer__button.is-selected .u-icon__arrow {
+    display: none;
+} */
+.p-quiz-box__note{
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    display: block;
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    gap: 16px;
+    line-height: 1.8;
+    margin-top: 16px;
+    padding: 24px;
+}
+
+.p-hero{
+    padding: 110px 0 76px;
+}
+.p-hero__title__label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.8;
+}
+.p-hero__title__inline{
+    font-size: 60px;
+    margin-top: 12px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.5;
+    top: 154px;
+}
 .fixed__line_icon{
     width: 36px;
-height: 36px;
-left: 24px;
-top: 22px;
-margin-right: 8px;
-background-color: #fff;
+    height: 36px;
+    left: 24px;
+    top: 22px;
+    margin-right: 8px;
+    background-color: #fff;
+    background: radial-gradient(#fff 60%, transparent 60%);
+
 }
 .footer_sns{
     display: flex;
@@ -253,3 +443,4 @@ background-color: #fff;
     border-radius: 50%;
     padding: 5px;
 }
+
