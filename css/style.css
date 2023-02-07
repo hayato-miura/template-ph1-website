@@ -405,24 +405,24 @@ h6 {
 }
 
 .p-quiz-box__answer__correct{
-    border-color: #fff2f5;
     border-radius: 8px;
     margin-top: 16px;
     padding: 24px 40px;
 }
 .p-quiz-box__answer__correct.is-correct{
     display: block;
+    background-color: #FFF2F5;
 }
 
-.p-quiz-box__answer__correct .is-incorrect{
-    border-color: #eff2f5;
-    display: block;
-}
+
 .p-quiz-box__answer__correct.is-incorrect{
+    border-color: #f6f6f6;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 0.05em;
     line-height: 1.5;
+    display: block;
+    background-color: #EFF2F5;
 }
 .is-correct.p-quiz-box__answer__correct__title{
     color: #e34e70;

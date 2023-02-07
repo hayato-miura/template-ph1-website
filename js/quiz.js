@@ -44,7 +44,9 @@
     }
 
     const setClassName = (target, isCorrect) => {
-        target.classlist.add(isCorrect ? 'is-correct' : 'is-incorrect');
+        console.log(target);
+        console.log(isCorrect);
+        target.classList.add(isCorrect ? 'is-correct' : 'is-incorrect');
     }
 
     // 各問題の中での処理
@@ -63,7 +65,7 @@
                 // 全てのボタンを非活性化
                 setDisabled(answers);
 
-                // 正解ならtrue,不正解ならfalseをcheckCorrectに格納
+                // 正解ならtrue,不正解ならfalseをisCorrectに格納
                 const isCorrect = CORRECT_ANSWERS[selectedQuiz].index === selectedAnswer;
 
                 // 回答欄にテキストやclass名を付与
