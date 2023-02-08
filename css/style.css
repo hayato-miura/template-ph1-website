@@ -46,7 +46,21 @@ h6 {
     margin: 0;
 }
 
-.p-header{
+@font-face {
+    font-family: "posse-icon";
+    src: url(../assets/fonts/posse-icon.ttf),
+        format("truetype"),
+        url(../assets/fonts/posse-icon.woff) 
+        format("woff"),
+        url(../assets/fonts/posse-icon.svg),
+        format("svg");
+        font-display: inline-block;
+        font-style: normal;
+        font-weight: normal;
+}
+
+/* まだ書いてないところある */
+/* .p-header{
     align-items: center;
     background-color:#fff;
     display: flex;
@@ -58,8 +72,8 @@ h6 {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 2;
-}
+    z-index: 999;
+} */
 .p-header_nav_list{
     display: flex;
     gap: 30px;
@@ -272,6 +286,7 @@ h6 {
     bottom: 16px;
     right: 16px;
     position: fixed;
+    z-index: 999;
 }
 .p-fixedLine__link{
     align-items: center;
@@ -408,6 +423,7 @@ h6 {
     border-radius: 8px;
     margin-top: 16px;
     padding: 24px 40px;
+    display: none;
 }
 .p-quiz-box__answer__correct.is-correct{
     display: block;
@@ -480,3 +496,230 @@ h6 {
     padding: 5px;
 }
 
+figure>img{
+    width: 100%;
+}
+
+@media not all and (min-width: 768px){
+    /* .p-header{
+        background-color: #fff;
+        flex-direction: column;
+        inset: 0;
+        padding: 136px 16px 40px;
+        position: fixed;
+        transition: opacity 0.4s, visibility 0.4s;
+        visibility: hidden;
+        
+    } */
+    .p-header_inner{
+      display: none;
+    }
+    .p-header.is-open .p-header__inner{
+        opacity: 1;
+        visibility: visible;
+    }
+    .p-header_nav_list{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .p-fixedLine{
+        right: 0;
+    }
+    .p-fixedLine__link{
+        gap: 8px;
+        justify-content: center;
+    }
+    .p-fixedLine__link__text br {
+        display: none;
+    }
+    .p-line__title{
+        flex-direction: column;
+    }
+    .p-top-hero__inner{
+        flex-direction: column-reverse;
+    }
+    .p-top-hero__body{
+        margin-top: -25px;
+    }
+    .p-top-hero__body__catchcopy br {
+        display: none;
+    }
+    
+}
+@media screen and (min-width:768px){
+    .hamburger{
+      display: none;
+    }
+    .l-main {
+        padding-top: 80px;
+      }
+      .l-container {
+        padding: 0 24px;
+      }
+      .l-footer__inner {
+        padding: 56px 24px 48px;
+      }
+      .p-header__logo {
+        width: 148px;
+      }
+      .p-header__button {
+        display: none;
+      }
+      .p-header__inner {
+        align-items: center;
+        margin-left: auto;
+      }
+      .p-header__nav__list {
+        gap: 32px;
+      }
+      .p-header__nav__item__link {
+        color: #666;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+      }
+      .p-header__official {
+        display: none;
+      }
+      .p-header__sns {
+        margin-left: 32px;
+      }
+      .p-footer {
+        margin-top: 80px;
+      }
+      .p-footer__logo {
+        width: 202px;
+      }
+      .p-footer__sns__list {
+        margin-top: 32px;
+      }
+      .p-footer__copyright {
+        line-height: 1.5;
+        padding: 38px 24px 33px;
+      }
+      .p-fixedLine {
+        bottom: 16px;
+        right: 16px;
+      }
+      .p-fixedLine__link {
+        border-radius: 16px;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+        padding: 22px 20px 22px 24px;
+      }
+      .p-fixedLine__link .u-icon__line {
+        font-size: 36px;
+      }
+      .p-fixedLine__link .u-icon__link {
+        margin-left: 35px;
+      }
+      .p-fixedLine__link__text {
+        margin-left: 13px;
+      }
+      .p-heading {
+        font-size: 36px;
+        letter-spacing: 0.05em;
+        line-height: 1.5;
+      }
+      .p-heading__caption {
+        margin-top: 8px;
+      }
+      .p-hero {
+        padding: 110px 0 76px;
+      }
+      .p-hero__title__label {
+        font-size: 18px;
+      }
+      .p-hero__title__inline {
+        font-size: 60px;
+        margin-top: 12px;
+      }
+      .p-line {
+        margin-top: 144px;
+      }
+      .p-line__body {
+        border-radius: 56px;
+        padding: 68px;
+      }
+      .p-line__title {
+        gap: 8px;
+      }
+      .p-line__content {
+        line-height: 1.8;
+        margin-top: 16px;
+        text-align: center;
+      }
+      .p-line__footer {
+        margin-top: 16px;
+      }
+      .p-top-container {
+        margin-top: 96px;
+      }
+      .p-top-hero__body {
+        border-radius: 24px;
+        padding: 50px 62px;
+      }
+      .p-top-hero__body__title {
+        font-size: 16px;
+      }
+      .p-top-hero__body__catchcopy {
+        font-size: 60px;
+        letter-spacing: 0.05em;
+        line-height: 1.3333;
+        margin-top: 10px;
+      }
+      .p-top-hero__image {
+        border-radius: 80px 0 0 80px;
+        margin-left: -125px;
+        margin-right: calc(50% - 50vw);
+        max-height: 680px;
+      }
+      /* .p-top-about__body {
+        -ms-grid-columns: (1fr)[2];
+        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 42px;
+      } */
+    .p-quiz-hero{
+        background-image: url(../assets/img/quiz/bg-hero.jpg);
+    }
+    .p-quiz-container {
+        margin-top: 120px;
+      }
+      .p-quiz-box:not(:first-of-type) {
+        margin-top: 120px;
+      }
+      .p-quiz-box__label {
+        font-size: 36px;
+      }
+      .p-quiz-box__question__title__text {
+        font-size: 36px;
+        line-height: 1.5;
+        margin-top: 24px;
+      }
+      .p-quiz-box__question__image {
+        margin-top: 64px;
+      }
+      .p-quiz-box__answer {
+        margin-top: 64px;
+      }
+      /* .p-quiz-box__answer__list {
+        -ms-grid-columns: (1fr)[3];
+        gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+      } */
+      .p-quiz-box__answer__button {
+        border-width: 5px;
+        font-size: 18px;
+        padding: 19px;
+      }
+      .p-quiz-box__answer__button .u-icon__arrow {
+        font-size: 16px;
+      }
+      .p-quiz-box__note {
+        font-size: 18px;
+      }
+      .u-sp-visible {
+        display: none;
+      }
+}

@@ -871,12 +871,15 @@ body {
   }
   .p-top-hero__scroll {
     display: none;
+    /* 書いてない */
   }
   .p-quiz-box__note .u-icon__note {
     font-size: 17px;
+    /* 書いてない */
   }
   .u-sp-hidden {
     display: none;
+    /* 書いてない */
   }
 }
 @media screen and (min-width: 768px) {

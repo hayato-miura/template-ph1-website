@@ -62,7 +62,7 @@
      * @description クイズコンテイナーの取得
      * @type {HTMLElement}
      */
-    const quizContainer = document.getElementById('quizContainer');
+    const quizContainer = document.getElementById('js-quizContainer');
 
     /**
     *@description クイズ一つ一つのHTMLを生成するための関数
@@ -83,7 +83,7 @@
     </li>`).join('');
 
     // 引用テキストの生成
-    const noteHtml = quizItem ?  `<cite class ="p-quiz-box__note">
+    const noteHtml = quizItem.note ?  `<cite class ="p-quiz-box__note">
     <i  class = "u-icon__note"></i>${quizItem.note} 
     </cite>`: '';
 
@@ -164,16 +164,21 @@ const setDisabled = answers => {
   })
 }
 
+
+
+const setTitle = (target, isCorrect) => {
+  target.innerText = isCorrect ? '正解！' : '不正解...';
+}
+
 /**
  * @description trueかfalseで出力する文字列を出しわける
  * @param target 
  * @param isCorrect
  */
 
-const setTitle = (target, isCorrect) => {
-  target.innerText = isCorrect ? '正解！' : '不正解...';
-}
-
+const setClassName = (target, isCorrect) => {
+  target.classList.add(isCorrect ? 'is-correct' : 'is-incorrect');
+} 
 /**
  * 各問題の中での処理
  */
@@ -194,7 +199,6 @@ allQuiz.forEach(quiz => {
 // 正解ならtrue, 不正解ならfalseをcheckCorrectに格納
 const correctNumber = quizArray[selectedQuiz].correctNumber
 const isCorrect = correctNumber === selectedAnswerNumber;
-
 // 回答欄にテキストやclass名を付与
 answerText.innerText = quizArray[selectedQuiz].answers[correctNumber];
 setTitle(answerTitle, isCorrect);
