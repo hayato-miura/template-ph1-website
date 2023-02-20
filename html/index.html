@@ -16,6 +16,15 @@
         <div class="p-header_logo">
             <img src="../assets/img/logo.svg" alt="POSSE">
         </div>
+        <div class="openbtn" id="openbtn"><span></span><span></span></div>
+        <nav id="g-nav">
+            <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+            <ul>
+            <li><a href="#">POSSEとは</a></li> 
+            <li><a href="#">クイズ</a></li>  
+            </ul>
+            </div>
+        </nav>
         <div class="p-header_inner">
             <nav class="p-header_nav">
                 <ul class="p-header_nav_list">
@@ -39,7 +48,7 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main id="">
         <section class="p-top-hero">
             <div class="p-top-hero__inner">
                 <div class="p-top-hero__body">
@@ -76,7 +85,6 @@
                 </div>
             </section>
         </div>
-        </main>
         <div class="p-line">
             <div class="l-container">
                 <div class="p-line__body">
@@ -136,5 +144,7 @@
             <small lang="en">©︎2022 POSSE</small>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../js/openbtn.js"></script>
 </body>
 </html>

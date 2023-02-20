@@ -17,6 +17,7 @@
         <div class="p-header_logo">
             <img src="../assets/img/logo.svg" alt="POSSE">
         </div>
+        <div class="openbtn quiz-openbtn" id="openbtn"><span></span><span></span></div>
         <div class="p-header_inner">
             <nav class="p-header_nav">
                 <ul class="p-header_nav_list">
@@ -24,7 +25,7 @@
                     <a href="./index.html">POSSEとは</a>
                 </li>
                 <li class="p-header_nav_item">
-                    <a href="./quiz.html">クイズ</a>
+                    <a href="./quiz2.html">クイズ</a>
                 </li>
                 <li class="p-header_nav_item header_icon">
                     <a href="http://twitter.com/posse_program" >
@@ -41,7 +42,7 @@
         </div>
     </header>
 
-    <main class="l-main">
+    <main class="l-main quiz-l-main">
         <section class="p-hero p-quiz-hero">
             <div class="l-container">
                 <h1 class="p-hero__title__label">POSSE</h1>
@@ -50,7 +51,6 @@
         </section>
 
         <div class="p-quiz-container l-container" id="js-quizContainer"></div>
-    </main>
     <div class="p-line">
         <div class="l-container">
             <div class="p-line__body">
@@ -74,17 +74,16 @@
             </div>
         </div>
     </div>
-
-
-<footer class="footer">
+</main>
+<footer class="footer quiz-footer">
     <div class="p-fixedLine">
         <a href="https://line.me/R/ti/p/@651htnqp?from=page" target="_blank" class="p-fixedLine__link">
             <i class="u-icon__line"></i>
                         <img src="../assets/img/icon/icon-line.svg" alt="" class="fixed__line_icon">
-                        <p class="p-fixedLine__link__text">
+                        <p class="p-fixedLine__link__text quiz-p-fixedLine__link__text">
                         <span class="u-sp-hidden">POSSE</span>公式LINEで<br />最新情報をGET！
                         </p>
-                        <img src="../assets/img/icon/icon-link-light.svg" alt="">
+                        <img src="../assets/img/icon/icon-link-light.svg" alt="" class="p-fixedLine__arrow">
             <i class="u-icon__link"></i>
         </a>
     </div>
@@ -111,6 +110,7 @@
         <small lang="en">©︎2022 POSSE</small>
     </div>
 </footer>
-<script src="../js/quiz2.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="../js/openbtn.js"></script>
 </body>
 </html>
