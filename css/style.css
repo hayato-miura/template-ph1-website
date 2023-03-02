@@ -615,7 +615,7 @@ figure>img{
     }
 
     /*ナビゲーション*/
-    #g-nav ul {
+    .hamburger__list{
         display: none;
         /*ナビゲーション天地中央揃え*/
         position: absolute;
@@ -629,11 +629,17 @@ figure>img{
         display: block;
     }
 
+    .openbtn__footer_sns{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     /*リストのレイアウト設定*/
 
     #g-nav li{
       list-style: none;
         text-align: center; 
+        margin-left: 8px;
     }
 
     #g-nav li a{
@@ -688,13 +694,13 @@ figure>img{
     justify-content: center;
     gap: 20px;
     margin-bottom: 48px;
+    bottom: 25px;
 }
 .openbtn__footer__icon{
     border: solid 1px #adadad;
     border-radius: 50%;
     padding: 5px;
     position: relative;
-    top:350px;
     display: inline-flex;
 
 }
@@ -865,7 +871,7 @@ letter-spacing: 0.14em;
     width: fit-content;
   }
   .quiz-openbtn{
-    right: -921px;
+    right: -91%;
   }
   .quiz-p-fixedLine__link__text {
     font-size: 14px;
